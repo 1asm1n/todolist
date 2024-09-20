@@ -1,0 +1,50 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  padding: 24px 56px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+
+  .addTask {
+    display: flex;
+    width: 450px;
+    height: 51px;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+    border: 0;
+    
+    color: #FFF;
+    font-family: "Inter Tight";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+}
+
+

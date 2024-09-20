@@ -1,0 +1,150 @@
+.main {
+    width: 45rem;
+    padding: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+
+    margin-top: 4rem;
+
+    border-radius: 1.6rem;
+    border: 0.1rem solid #EAECF0;
+    background: #FFF;
+    box-shadow: 0rem 0.1rem 0.2rem 0rem rgba(16, 24, 40, 0.1);
+
+    p {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.03rem;
+    }
+
+    .tasks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        align-self: stretch;
+
+        .task {
+            display: flex;
+            padding: 1.6rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.6rem;
+            align-self: stretch;
+            border-radius: 0.8rem;
+            border: 0.1rem dashed #D7DDE9;
+            font-size: 1.6rem;
+
+            cursor: pointer;
+            transition: all 0.2s;
+
+            .taskContent {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+            }
+
+            .checkbox {
+                width: 2.4rem;
+                min-width: 2.4rem;
+                height: 2.4rem;
+                display: flex;
+                padding: 0.3rem;
+                justify-content: center;
+                align-items: center;
+                flex: 1 0 0;
+                align-self: stretch;
+                border-radius: 0.4rem;
+                border: 0.1rem solid #D7DDE9;
+                background: #FFF;
+            }
+
+            label span {
+                width: 27.4rem;
+
+                color: #000;
+                font-family: "Inter Tight";
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -0.03rem;
+                cursor: pointer;
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            &:hover {
+                border-radius: 0.8rem;
+                background: #F7F9FD;
+                border: 0.1rem dashed #d7dde900;
+
+            }
+        }
+
+        .notTasks{
+
+            display: flex;
+            padding: 1.6rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.6rem;
+            align-self: stretch;
+            border-radius: 0.8rem;
+            border: 0.1rem dashed #f88d8d;
+            font-size: 1.6rem;
+
+            transition: all 0.2s;
+        }
+    }
+
+    .completedTasks {
+        .checkbox {
+            border-radius: 0.4rem;
+            border: 0.1rem solid #0796D3 !important;
+            background: #A0DCF6 !important;
+        }
+
+        label span {
+            color: rgba(0, 0, 0, 0.54) !important;
+            text-decoration-line: line-through !important;
+        }
+    }
+
+    @media (max-width: 768px) { 
+        width: 100%; 
+        padding: 2rem; 
+
+        p {
+            font-size: 1.4rem; 
+        }
+
+        .task, .notTasks {
+            font-size: 1.4rem; 
+        }
+    }
+
+    @media (max-width: 480px) { 
+        flex-direction: column; 
+        align-items: stretch; 
+
+        p {
+            font-size: 1.2rem; 
+        }
+
+        .task, .notTasks {
+            font-size: 1.2rem; 
+        }
+    }
+}
